@@ -1,16 +1,74 @@
-# React + Vite
+# ecommerce-web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lightweight React + Vite starter for an e-commerce demo application.
 
-Currently, two official plugins are available:
+This repo contains a small React app scaffolded with Vite. It demonstrates a typical project layout, data fetching from a sample API, and a few example components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Vite-powered React app with fast HMR
+- Example data fetching in `src/App.jsx` (uses jsonplaceholder)
+- Simple component structure under `src/components`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 18+ (recommended)
+- npm (or yarn/pnpm)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Quick Start
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Run development server
+
+```bash
+npm run dev
+```
+
+3. Build for production
+
+```bash
+npm run build
+```
+
+4. Preview production build locally
+
+```bash
+npm run preview
+```
+
+## Available Scripts
+
+- `dev` - start Vite dev server with HMR
+- `build` - build production bundle
+- `preview` - locally preview production build
+
+See `package.json` for exact script names.
+
+## Project Structure (key files)
+
+- `index.html` - app entry HTML
+- `src/main.jsx` - React entry point
+- `src/App.jsx` - main app (includes sample fetch to jsonplaceholder)
+- `src/components/SignupForm.jsx` - example component
+- `src/AuthContext.js` - authentication context placeholder
+
+## Notes about data fetching
+
+The current `src/App.jsx` fetches user data from `https://jsonplaceholder.typicode.com/users` and renders it. You can replace this with your own API or extend the component with loading/error handling located in `src/App.jsx`.
+
+## Contributing
+
+Feel free to open issues or PRs. For changes that affect configuration (ESLint, Vite, build), please include motivation and testing steps.
+
+## License
+
+This project is provided as-is. Add a license file if you plan to publish.
+
+---
+
+If you'd like, I can add loading/error UI to `src/App.jsx`, wire up basic routing, or create a simple product list component next.
