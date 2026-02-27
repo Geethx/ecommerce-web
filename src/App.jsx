@@ -4,11 +4,13 @@ import Home from './pages/Home'
 import Auth from './pages/Auth'
 import Checkout from './pages/Checkout'
 import Navbar from './components/Navbar'
+import AuthProvider from './context/AuthContext'
 
 
 export default function App() {
     
   return (
+    <AuthProvider>
     <div className='app'>
       <Navbar />
       <Routes>
@@ -18,5 +20,6 @@ export default function App() {
       </Routes>
 
     </div>
+    </AuthProvider>
   )
 }
